@@ -1,0 +1,66 @@
+.get {
+    padding: 156px 0 55px;
+    background: url(/src/assets/images/get-bg.png) center/100% 100%;
+    position: relative;
+
+    &__content {
+        max-width: 359px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: toRem(42);
+        line-height: 62px;
+        letter-spacing: 0.8px;
+        color: $light-color;
+        margin-bottom: 15px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        line-height: 27px;
+        letter-spacing: 1.15px;
+        color: $light-color;
+        max-width: 322px;
+        width: 100%;
+        margin-bottom: 30px;
+        
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        font-weight: 700;
+        width: 172px;
+        line-height: 58px;
+        background-color: $light-color;
+        border-radius: 29px;
+        text-align: center;
+    }
+
+    &__img {
+        max-width: 478px;
+        position: absolute;
+        right: 15%;
+        bottom: 0;
+
+        @include a (laptop) {
+            right: 10%;
+        }
+
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+}

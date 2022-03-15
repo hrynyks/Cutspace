@@ -1,0 +1,120 @@
+.reviews {
+    padding: 60px 0;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 58px;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__title {
+        font-size: toRem(42);
+        line-height: 62px;
+        letter-spacing: 0.8px;
+        max-width: 455px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        max-width: 398px;
+        width: 100%;
+        line-height: 27px;
+        letter-spacing: 1.15px;
+        color: #606060;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        max-width: 350px;
+        width: 100%;
+        background-color: $light-color;
+        border-radius: 0px 0px 5px 5px;
+
+        &-image {
+            position: relative;
+        }
+
+        &-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $light-color;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            display: none;
+        }
+
+        &-wrap {
+            padding: 30px;
+
+            @include a (tablet-xl) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &-descr {
+            line-height: 27px;
+            letter-spacing: 1.15px;
+            margin-bottom: 23px;
+
+            @include a (tablet-xl) {
+                text-align: center;
+            }
+        }
+
+        &-name {
+            font-size: toRem(18);
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        &-city {
+            line-height: 27px;
+            letter-spacing: 1.15px;
+            color: #58BEBF;
+        }
+
+        &:hover {
+            filter: drop-shadow(0px 10px 52px rgba(0, 0, 0, 0.08));
+        }
+
+        &:hover .reviews__item-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover .reviews__item-city {
+            color: $accent-color;
+        }
+    }
+}
